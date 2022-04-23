@@ -1,4 +1,4 @@
-//package com.ait.PaymentService;
+package com.ait.PaymentService;
 //
 //import static org.junit.Assert.assertEquals;
 //import static org.junit.Assert.assertNotNull;
@@ -21,7 +21,9 @@
 //
 //@RunWith(SpringRunner.class)
 //@SpringBootTest(classes = Payment.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-//public class PaymentControllerTests {
+public class PaymentControllerTests {
+
+}
 //	@Autowired
 //	private TestRestTemplate restTemplate;
 //
