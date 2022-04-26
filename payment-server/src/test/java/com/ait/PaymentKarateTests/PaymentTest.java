@@ -1,11 +1,14 @@
 package com.ait.PaymentKarateTests;
 
-import com.intuit.karate.junit5.Karate;
+import org.junit.jupiter.api.Test;
+import org.springframework.boot.test.context.SpringBootTest;
 
-class PaymentTests {
 
-    @Karate.Test
-    Karate testAll() {
-        return Karate.run().relativeTo(getClass());
-    }
-}
+	@SpringBootTest
+	class PaymentTests {
+
+		@Test
+		void contextLoads() {
+		}
+
+	}

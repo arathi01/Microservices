@@ -2,92 +2,53 @@ package com.ait.PaymentService.payment;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 
 @Entity
-@Table(name ="Payment_TB")
+@Table(name ="PaymentTable")
 public class Payment {
 	
 	@Id
-	@GeneratedValue
-	
-	private Long paymentId;
-	private String paymentStatus;
-	private String transactionId;
-	private String firstName;
-	private String lastName;
-//	@Transient
-	private String email;
-	private String address;
-	public Payment(long i, String string, String j, String string2, String string3, String string4, String string5) {
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Long getPaymentId() {
-		return paymentId;
-	}
-	public void setPaymentId(Long paymentId) {
-		this.paymentId = paymentId;
-	}
-	public String getPaymentStatus() {
-		return paymentStatus;
-	}
-	public void setPaymentStatus(String paymentStatus) {
-		this.paymentStatus = paymentStatus;
-	}
-	public String getTransactionId() {
-		return transactionId;
-	}
-	public void setTransactionId(String transactionId) {
-		this.transactionId = transactionId;
-	}
-	public String getFirstName() {
-		return firstName;
-	}
-	public void setFirstName(String firstName) {
-		this.firstName = firstName;
-	}
-	public String getLastName() {
-		return lastName;
-	}
-	public void setLastName(String lastName) {
-		this.lastName = lastName;
-	}
 
-	public String getEmail() {
-		return email;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long paymentId;
+    private String paymentName;
+    private String paymentAddress;
+    private String paymentCode;
+    
+	public String getPaymentName() {
+		return paymentName;
 	}
-	public void setEmail(String email) {
-		this.email = email;
+	public void setPaymentName(String paymentName) {
+		this.paymentName = paymentName;
 	}
-	public String getAddress() {
-		return address;
+	public String getPaymentAddress() {
+		return paymentAddress;
 	}
-	public void setAddress(String address) {
-		this.address = address;
+	public void setPaymentAddress(String paymentAddress) {
+		this.paymentAddress = paymentAddress;
+	}
+	public String getPaymentCode() {
+		return paymentCode;
+	}
+	public void setPaymentCode(String paymentCode) {
+		this.paymentCode = paymentCode;
 	}
 	@Override
 	public String toString() {
-		return "Payment [paymentId=" + paymentId + ", paymentStatus=" + paymentStatus + ", transactionId="
-				+ transactionId + ", firstName=" + firstName + ", lastName=" + lastName + ",email="
-				+ email + ", address=" + address + "]";
+		return "Payment [paymentName=" + paymentName + ", paymentAddress=" + paymentAddress + ", paymentCode="
+				+ paymentCode + "]";
 	}
-	public static Object builder() {
+	public void setTransactionId(String string) {
 		// TODO Auto-generated method stub
-		return null;
+		
 	}
-
-	public static Object run() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-
-	
-	
-
-	
 }
+
+
+	
+
 

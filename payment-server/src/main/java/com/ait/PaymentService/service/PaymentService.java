@@ -17,25 +17,14 @@ import com.ait.PaymentService.repository.PaymentRepository;
 
 public class PaymentService {
 	
-	
-	private PaymentRepository repository;
 
-	public Payment doPayment(Payment payment) {
-		payment.setTransactionId(UUID.randomUUID().toString());
-		return repository.save(payment);
-	}
+	private PaymentRepository paymentrepository;
 
+//	public Payment doPayment(Payment payment) {
+////		payment.setTransactionId(UUID.randomUUID().toString());
+//		return repository.save(payment);
+//	}
 
-
-
-
-	public void updatePayment(Long paymentId, String firstName, String lastName, String email, String address) {
-		// TODO Auto-generated method stub
-		
-	}
-	
-
-		
 		private final PaymentRepository paymentRepository;
 		
 		@Autowired
@@ -68,7 +57,7 @@ public class PaymentService {
 			Optional<Payment> optionalPayment = paymentRepository.findById(id);
 			
 			Payment existingPayment = optionalPayment.get();
-			existingPayment.setFirstName(payment.getFirstName());
+			existingPayment.setPaymentAddress(payment.getPaymentAddress());
 //			existingPayment.setlastName(payment.getlastName());
 //			existingPayment.setEmail(payment.getEmail());
 //			existingPayment.setAddress(payment.getAddress());
@@ -76,15 +65,60 @@ public class PaymentService {
 			return paymentRepository.save(existingPayment);
 		}
 
+		public void updatePayment(Long paymentId, String paymentName, String paymentAddress, String paymentCode) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		public void deletePayment(Long paymentId) {
+			// TODO Auto-generated method stub
+			
+		}
+
+	
+
 		
 		
 
 
 	}
 
+	
+	
 
-
-
-
-
-
+//
+//	    @Autowired
+//	    private PaymentRepository paymentRepository;
+//
+//	    public Payment savePayment(Payment payment) {
+////	        log.info("Inside savePayment of PaymentService");
+//	        return paymentRepository.save(payment);
+//	    }
+//
+//	    public Payment findPaymentById(Long paymentId) {
+////	        log.info("Inside savePayment of PaymentService");
+//	        return paymentRepository.findByPaymentId(paymentId);
+//	    }
+//
+//		public List<Payment> getPayments1() {
+//			// TODO Auto-generated method stub
+//			return null;
+//		}
+//
+//		public List<Payment> getPayments() {
+//			// TODO Auto-generated method stub
+//			return null;
+//		}
+//
+////		public Payment savePayment(Payment payment) {
+////			// TODO Auto-generated method stub
+////			return null;
+////		}
+//
+//	
+//	}
+//
+//
+//
+//
+//

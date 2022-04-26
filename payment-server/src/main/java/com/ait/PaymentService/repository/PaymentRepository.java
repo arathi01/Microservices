@@ -8,6 +8,6 @@ import com.ait.PaymentService.payment.Payment;
 @Repository
 public interface PaymentRepository extends JpaRepository<Payment, Long>{
 
-	Payment findAllById(String string);
+	Payment findByPaymentId(Long paymentId);
 
 }
